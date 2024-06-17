@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "oTree Study",
-    "base_url": "https://the-three-fish.github.io/xindamate.com",
+    "base_url": "https://the-three-fish.github.io",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/s-logo-blue.jpg",
