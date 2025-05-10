@@ -365,3 +365,5 @@ otree devserver
 ---
 
 本教程的完整代码可在以下仓库获取：<a href="https://github.com/The-Three-Fish/risk_preferences" target="_blank">github.com/The-Three-Fish/risk_preferences</a>
+
+该实验的heroku地址 => <a href="https://xd-risk-preferences-4a810d33050a.herokuapp.com/demo">https://xd-risk-preferences-4a810d33050a.herokuapp.com/demo</a>
