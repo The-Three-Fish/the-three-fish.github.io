@@ -105,11 +105,8 @@ oTree Launcher 提供了一个专门的日志查看面板，具有以下特性�
 
 oTree Launcher 从设计之初就考虑了跨平台兼容性：
 
-- **Windows 10/11**（64位）：主要支持平台，经过充分测试
-- **macOS 11+**：完全支持，包括 Intel 和 Apple Silicon 芯片
-- **Linux**：支持主流发行版（Ubuntu、Fedora、Debian 等）
+- **Windows 10/11**（64位）：主要支持平台，经过充分测试，后面再支持 Mac 和 Linux。
 
-所有平台使用统一的界面和交互逻辑，无需重新学习。应用还会自动处理不同操作系统的路径差异、权限问题和特殊配置。
 
 ### 🎯 欢迎向导
 
@@ -288,9 +285,11 @@ oTree Launcher 目前处于**免费体验阶段**，我们诚邀所有 oTree 研
 
 访问官网下载适合你操作系统的版本：
 
-- **Windows**：`oTree-Launcher-Setup-1.0.0.exe`（约 150 MB）
-- **macOS**：`oTree-Launcher-1.0.0.dmg`（约 180 MB）
-- **Linux**：`oTree-Launcher-1.0.0.AppImage`（约 160 MB）
+下载地址：[https://github.com/lcf33125/otree-deploy-one-time/releases](https://github.com/lcf33125/otree-deploy-one-time/releases)
+
+- **Windows**：`oTree-Launcher-Setup-1.0.0.exe`（约 150 MB） 
+<!-- - **macOS**：`oTree-Launcher-1.0.0.dmg`（约 180 MB）
+- **Linux**：`oTree-Launcher-1.0.0.AppImage`（约 160 MB） -->
 
 安装过程非常简单：
 
@@ -400,7 +399,7 @@ oTree Launcher 仍在持续开发中，以下是我们计划添加的功能：
 
 我们会根据社区反馈不断调整开发优先级。如果你有特别需要的功能，欢迎在 GitHub 提出建议！
 
-<!-- ## 开源与社区
+## 开源与社区
 
 oTree Launcher 是一个完全开源的项目，源代码托管在 GitHub 上。我们欢迎所有形式的贡献：
 
@@ -416,7 +415,7 @@ oTree Launcher 是一个完全开源的项目，源代码托管在 GitHub 上。
 - **构建工具**：Vite 7 + electron-vite 4
 - **打包工具**：electron-builder 25
 
-如果你是开发者，欢迎查看 `CLAUDE.md` 和 `docs/` 目录了解项目架构和贡献指南。 -->
+如果你是开发者，欢迎查看 `CLAUDE.md` 和 `docs/` 目录了解项目架构和贡献指南。
 
 ## 结语
 
@@ -426,9 +425,9 @@ oTree Launcher 的诞生源于一个简单的愿望：**让研究者把时间花
 
 无论你是刚开始接触实验经济学的学生、正在开展研究项目的博士生，还是需要在课堂上演示实验的教授，oTree Launcher 都能成为你得力的助手。
 
-### 🎁 免费体验，欢迎反馈！
+### 欢迎反馈！
 
-目前 oTree Launcher 处于**免费体验阶段**，我们诚邀你试用并提供宝贵意见：
+我们诚邀你试用并提供宝贵意见：
 
 - 💬 **遇到问题？有建议？** → [提交 Issue](https://github.com/The-Three-Fish/the-three-fish.github.io/issues)
 - 🗨️ **想交流使用心得？** → [参与讨论](https://github.com/The-Three-Fish/the-three-fish.github.io/discussions)

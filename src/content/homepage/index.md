@@ -25,7 +25,7 @@ feature:
 # services
 services:
   - title: "🚀 oTree Launcher - 零配置的实验研究环境"
-    content: "告别命令行恐惧！oTree Launcher 是专为 oTree 研究者设计的桌面应用，内置 Python 版本管理（3.7-3.13）、一键依赖安装、智能虚拟环境。无论你是新手还是专家，都能在 5 分钟内启动你的实验。目前处于免费体验阶段，欢迎试用并反馈建议！支持 Windows / macOS / Linux 全平台。"
+    content: "告别命令行恐惧！oTree Launcher 是专为 oTree 研究者设计的桌面应用，内置 Python 版本管理（3.7-3.13）、一键依赖安装、智能虚拟环境。无论你是新手还是专家，都能在 5 分钟内启动你的实验。欢迎试用并反馈建议！"
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
