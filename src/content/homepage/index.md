@@ -24,46 +24,35 @@ feature:
 
 # services
 services:
-  - title: "It is the most advanced digital marketing and it company."
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "🚀 oTree Launcher - 零配置的实验研究环境"
+    content: "告别命令行恐惧！oTree Launcher 是专为 oTree 研究者设计的桌面应用，内置 Python 版本管理（3.7-3.13）、一键依赖安装、智能虚拟环境。无论你是新手还是专家，都能在 5 分钟内启动你的实验。目前处于免费体验阶段，欢迎试用并反馈建议！支持 Windows / macOS / Linux 全平台。"
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
       - "/images/service-slide-3.png"
     button:
       enable: true
-      label: Check it out
+      label: "了解详情"
+      link: /blog/otree-launcher
+
+  - title: "oTree 实验定制开发服务"
+    content: "拥有多年 oTree 开发经验，为您提供从实验设计到部署的一站式服务。无论是经典的公共品博弈、信任博弈，还是复杂的市场实验、多人互动实验，我们都能帮您实现。代码托管在 GitHub 私有仓库，版本控制，安全可靠。"
+    images:
+      - "/images/service-slide-1.png"
+      - "/images/service-slide-2.png"
+      - "/images/service-slide-3.png"
+    button:
+      enable: true
+      label: "联系我们"
       link: /contact
 
-  - title: "It is a privately owned Information and cyber security company"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images: 
-      - "/images/service-slide-1.png"
-    button:
-      enable: true
-      label: Check it out
-      link: /contact
-  
-  - title: "It’s a team of experienced and skilled people with distributions"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
+  - title: "实验托管与技术支持"
+    content: "提供全球多地服务器托管服务，确保您的实验参与者无论身处何地都能流畅参与。从环境配置、依赖安装到服务器运维，我们提供 7x24 技术支持。遇到任何 oTree 相关问题，都可以联系我们获得专业解答。"
     images:
       - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
     button:
       enable: true
-      label: Check it out
-      link: /contact
-
-  - title: "A company standing different from others"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-    images:
-      - "/images/service-slide-1.png"
-      - "/images/service-slide-2.png"
-      - "/images/service-slide-3.png"
-    button:
-      enable: true
-      label: Check it out
+      label: "查看方案"
       link: /contact
 
 # workflow
