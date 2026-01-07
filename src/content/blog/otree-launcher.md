@@ -267,10 +267,6 @@ const result = await window.api.startOtreePython(projectPath, pythonPath)
 
 ## 如何开始使用
 
-### 💡 当前状态：免费体验阶段
-
-oTree Launcher 目前处于**免费体验阶段**，我们诚邀所有 oTree 研究者和开发者试用这款工具。您的反馈对我们至关重要！
-
 **反馈渠道：**
 
 1. **提交 Issue**：发现 Bug 或有功能建议？
@@ -287,7 +283,7 @@ oTree Launcher 目前处于**免费体验阶段**，我们诚邀所有 oTree 研
 
 下载地址：[https://github.com/lcf33125/otree-deploy-one-time/releases](https://github.com/lcf33125/otree-deploy-one-time/releases)
 
-- **Windows**：`oTree-Launcher-Setup-1.0.0.exe`（约 150 MB） 
+- **Windows**：`oTree-Launcher-Setup-1.0.0.exe`（约 91 MB） 
 <!-- - **macOS**：`oTree-Launcher-1.0.0.dmg`（约 180 MB）
 - **Linux**：`oTree-Launcher-1.0.0.AppImage`（约 160 MB） -->
 
