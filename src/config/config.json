@@ -26,6 +26,22 @@
   "params": {
     "contact_form_action": "",
     "tag_manager_id": "",
+    "comments": {
+      "enable": true,
+      "provider": "giscus",
+      "repo": "The-Three-Fish/the-three-fish.github.io",
+      "repo_id": "R_kgDOMKWuNg",
+      "category": "Announcements",
+      "category_id": "DIC_kwDOMKWuNs4CqATY",
+      "mapping": "pathname",
+      "strict": "0",
+      "reactions_enabled": "1",
+      "emit_metadata": "0",
+      "input_position": "bottom",
+      "theme": "preferred_color_scheme",
+      "lang": "zh-CN",
+      "loading": "lazy"
+    },
     "footer_content": "一站式oTree开发服务，耐心细致的服务。一站式oTree开发服务，耐心细致的服务，确保项目顺利进行。专业团队，全程陪伴，满足您的需求。",
     "copyright": "Designed and Developed By oTree Study"
   },

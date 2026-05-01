@@ -1,0 +1,49 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import Post from "@/layouts/partials/Post.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
+import taxonomyFilter from "@/lib/utils/taxonomyFilter";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+
+export async function getStaticPaths() {
+  const categories = (
+    await getTaxonomy(config.settings.blog_folder as any, "categories")
+  ).filter((category) => category !== "others");
+
+  return categories.map((category) => ({
+    params: { category },
+  }));
+}
+
+const { category } = Astro.params;
+const posts = await getSinglePage(config.settings.blog_folder as any);
+const filteredPosts = sortByDate(taxonomyFilter(posts, "categories", category));
+const categoryTitle =
+  filteredPosts[0]?.data.categories.find(
+    (item: string) => slugify(item) === category,
+  ) || humanize(category || "");
+---
+
+<Base title={categoryTitle}>
+  <section class="section">
+    <div class="container">
+      <p class="mb-3 text-center text-sm uppercase text-text">Category</p>
+      <h1
+        class="mb-10 text-center font-normal lg:text-[56px]"
+        set:html={markdownify(categoryTitle)}
+      />
+      <div class="row">
+        {
+          filteredPosts.map((post) => (
+            <div class="col-12 mb-8 sm:col-6">
+              <Post post={post} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

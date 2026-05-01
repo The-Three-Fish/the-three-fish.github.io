@@ -1,0 +1,56 @@
+---
+import config from "@/config/config.json";
+
+const commentsConfig = config.params.comments;
+
+const {
+  enable,
+  provider,
+  repo,
+  repo_id,
+  category,
+  category_id,
+  mapping,
+  strict,
+  reactions_enabled,
+  emit_metadata,
+  input_position,
+  theme,
+  lang,
+  loading,
+} = commentsConfig;
+
+const isGiscusConfigured =
+  enable &&
+  provider === "giscus" &&
+  repo &&
+  repo_id &&
+  category &&
+  category_id;
+---
+
+{
+  isGiscusConfigured && (
+    <section class="mt-16 border-t border-border pt-10 text-left">
+      <h2 class="h4 mb-6">评论</h2>
+      <div class="giscus" />
+      <script
+        src="https://giscus.app/client.js"
+        data-repo={repo}
+        data-repo-id={repo_id}
+        data-category={category}
+        data-category-id={category_id}
+        data-mapping={mapping}
+        data-strict={strict}
+        data-reactions-enabled={reactions_enabled}
+        data-emit-metadata={emit_metadata}
+        data-input-position={input_position}
+        data-theme={theme}
+        data-lang={lang}
+        data-loading={loading}
+        crossorigin="anonymous"
+        async
+      />
+    </section>
+  )
+}

@@ -1,10 +1,12 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
+import { humanize, slugify } from "@/lib/utils/textConverter";
+import Comments from "@/layouts/components/Comments.astro";
 import { Image } from "astro:assets";
 
 const { post } = Astro.props;
 const { Content } = await post.render();
-const { title, image } =
+const { title, image, categories = [], tags = [], comments = true } =
   post.data;
 ---
 
@@ -25,11 +27,40 @@ const { title, image } =
             )
           }
           <h1 set:html={markdownify(title)} class="h2 text-left my-6" />
+          {
+            (categories.length > 0 || tags.length > 0) && (
+              <div class="mb-8 text-left text-sm text-text">
+                {categories.length > 0 && (
+                  <div class="mb-2 flex flex-wrap gap-2">
+                    <span class="font-medium text-dark">分类：</span>
+                    {categories.map((category: string) => (
+                      <a
+                        href={`/categories/${slugify(category)}`}
+                        class="hover:text-primary"
+                      >
+                        {humanize(category)}
+                      </a>
+                    ))}
+                  </div>
+                )}
+                {tags.length > 0 && (
+                  <div class="flex flex-wrap gap-2">
+                    <span class="font-medium text-dark">标签：</span>
+                    {tags.map((tag: string) => (
+                      <span>{humanize(tag)}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          }
     
           <div class="content mb-16 text-left">
             <Content />
             <!-- <Markdown content={post.body} components={shortcodes} /> -->
           </div>
+
+          {comments && <Comments />}
           
         </article>
       </div>

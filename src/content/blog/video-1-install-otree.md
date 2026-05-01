@@ -4,6 +4,8 @@ description: "手把手 oTree 安装教程"
 image: "/images/blog-4.jpg"
 date: 2025-08-04T05:00:00Z
 draft: false
+categories: ["oTree 入门系列"]
+tags: ["oTree", "入门", "安装"]
 ---
 
 

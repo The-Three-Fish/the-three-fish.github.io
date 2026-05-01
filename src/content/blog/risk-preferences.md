@@ -4,6 +4,8 @@ description: "Heading example Here is example of hedings. You can use this headi
 image: "/images/blog-1.jpg"
 date: 2025-05-01T05:00:00Z
 draft: false
+categories: ["oTree 实战进阶"]
+tags: ["oTree", "实验案例", "风险偏好"]
 ---
 
 *发表于 [otree Study] • 2025年5月 • 阅读时间12分钟*

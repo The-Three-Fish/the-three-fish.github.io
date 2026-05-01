@@ -4,6 +4,8 @@ description: "介绍 oTree Launcher - 一款专业的桌面应用，内置 Pytho
 image: "/images/blog-1.jpg"
 date: 2026-01-06T05:00:00Z
 draft: false
+categories: ["oTree 工具与动态"]
+tags: ["oTree", "工具", "Launcher"]
 ---
 
 *发表于 [otree Study] • 2026年1月 • 阅读时间 10 分钟*

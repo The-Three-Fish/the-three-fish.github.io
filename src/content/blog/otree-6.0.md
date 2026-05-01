@@ -4,6 +4,8 @@ description: "otree 6.0 AI 特性跟进"
 image: "/images/post_images/otree6.jpg"
 date: 2025-09-13T05:00:00Z
 draft: false
+categories: ["oTree 工具与动态"]
+tags: ["oTree", "版本更新", "Web API"]
 ---
 
 <!--

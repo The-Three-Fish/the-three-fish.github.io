@@ -3,8 +3,9 @@ import Pagination from "@/components/Pagination.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import { markdownify } from "@/lib/utils/textConverter";
+import { humanize, markdownify } from "@/lib/utils/textConverter";
 import Post from "@/partials/Post.astro";
 import type { TIndexData } from "@/types";
 import { getEntryBySlug } from "astro:content";
@@ -37,15 +38,36 @@ const currentPage = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
 const indexOfLastPost = currentPage * config.settings.pagination;
 const indexOfFirstPost = indexOfLastPost - config.settings.pagination;
 const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
+const categories = (
+  await getTaxonomy(config.settings.blog_folder as any, "categories")
+).filter((category) => category !== "others");
 ---
 
 <Base title={postIndex?.data.title}>
   <section class="section">
     <div class="container">
       <h1
-        class="mb-10 text-center font-normal lg:text-[56px]"
+        class="text-center font-normal lg:text-[56px]"
         set:html={markdownify(postIndex?.data.title)}
       />
+      <nav class="mx-auto mb-10 mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-3 text-sm">
+        <a
+          href={`/${blog_folder}`}
+          class="border-primary bg-primary px-4 py-2 text-white"
+        >
+          全部文章
+        </a>
+        {
+          categories.map((category) => (
+            <a
+              href={`/categories/${category}`}
+              class="border border-border px-4 py-2 text-dark transition hover:border-primary hover:text-primary"
+            >
+              {humanize(category)}
+            </a>
+          ))
+        }
+      </nav>
       <div class="row">
         {
           currentPosts.map((post) => (

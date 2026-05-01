@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import config from "@/config/config.json";
-import { plainify } from "@/lib/utils/textConverter";
+import { humanize, plainify, slugify } from "@/lib/utils/textConverter";
 
 const { post, index } = Astro.props;
 const { blog_folder, summary_length } = config.settings;
+const categories = post.data.categories || [];
 ---
 
 <div class="post">
@@ -17,6 +18,20 @@ const { blog_folder, summary_length } = config.settings;
         width={index === 0 ? 925 : 445}
         height={index === 0 ? 475 : 230}
       />
+    )
+  }
+  {
+    categories.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-2 text-sm text-text">
+        {categories.map((category: string) => (
+          <a
+            href={`/categories/${slugify(category)}`}
+            class="hover:text-primary"
+          >
+            {humanize(category)}
+          </a>
+        ))}
+      </div>
     )
   }
   <h2 class="h3 mb-2 mt-4">

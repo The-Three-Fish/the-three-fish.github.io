@@ -4,6 +4,8 @@ description: "常见问题回答，学长带你飞"
 image: "/images/blog-2.jpg"
 date: 2025-07-27T05:00:00Z
 draft: false
+categories: ["oTree 入门系列"]
+tags: ["oTree", "入门", "FAQ"]
 ---
 
 学弟/学妹，别慌！刚接触oTree的时候，大家问的问题都差不多。我把你这些问题，用咱们学生之间聊天的方式，整理了一下。这感觉就像你在宿舍楼下，碰到了一个刚做完实验的学长，他告诉你的一些“血泪经验”。

@@ -5,8 +5,9 @@ import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import Post from "@/layouts/partials/Post.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
-import { markdownify, plainify } from "@/lib/utils/textConverter";
+import { humanize, markdownify, plainify, slugify } from "@/lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 import type { TIndexData } from "@/types";
 
@@ -20,6 +21,10 @@ const posts = await getSinglePage(blog_folder as any);
 const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+const featuredCategories = currentPosts[0]?.data.categories || [];
+const categories = (await getTaxonomy(blog_folder as any, "categories")).filter(
+  (category) => category !== "others",
+);
 ---
 
 <Base title={postIndex?.data.title}>
@@ -29,6 +34,24 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
         class="text-center font-normal lg:text-[56px]"
         set:html={markdownify(postIndex?.data.title)}
       />
+      <nav class="mx-auto mt-8 flex max-w-4xl flex-wrap items-center justify-center gap-3 text-sm">
+        <a
+          href={`/${blog_folder}`}
+          class="border-primary bg-primary px-4 py-2 text-white"
+        >
+          全部文章
+        </a>
+        {
+          categories.map((category) => (
+            <a
+              href={`/categories/${category}`}
+              class="border border-border px-4 py-2 text-dark transition hover:border-primary hover:text-primary"
+            >
+              {humanize(category)}
+            </a>
+          ))
+        }
+      </nav>
       <div class="row pb-12">
         <div class="row col-12 pb-24 pt-16">
           <div class="md:col-6">
@@ -45,6 +68,20 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
             }
           </div>
           <div class="md:col-6">
+            {
+              featuredCategories.length > 0 && (
+                <div class="mt-4 flex flex-wrap gap-2 text-sm text-text">
+                  {featuredCategories.map((category: string) => (
+                    <a
+                      href={`/categories/${slugify(category)}`}
+                      class="hover:text-primary"
+                    >
+                      {humanize(category)}
+                    </a>
+                  ))}
+                </div>
+              )
+            }
             <h2 class="h3 mb-2 mt-4">
               <a
                 href={`/${blog_folder}/${currentPosts[0].slug}`}
